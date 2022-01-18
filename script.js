@@ -12,7 +12,7 @@ function dispinterest(vol) {
     // check validity of amount
     if (amount <= 0) {
       alert("Enter a positive number");
-      amount.focus();
+      document.getElementById('amount').focus();
       return false;
     }
 
@@ -26,7 +26,32 @@ function dispinterest(vol) {
     var amount = document.getElementById("amount").value;
     if (amount <= 0) {
         alert("Enter a positive number");
-        amount.focus();
+        var ele = document.getElementById("lin1f");
+            ele.innerHTML = "";
+            ele = document.getElementById("lin1s");
+            ele.innerHTML = "";
+            var ele = document.getElementById("lin1t");
+            ele.innerHTML = "";
+           
+            ele = document.getElementById("lin2f");
+            ele.innerHTML = "";
+            ele = document.getElementById("lin2s");
+            ele.innerHTML = "";
+            ele = document.getElementById("lin2t");
+            ele.innerHTML = ""; 
+            
+            ele = document.getElementById("lin3f");
+            ele.innerHTML = "";
+            ele = document.getElementById("lin3s");
+            ele.innerHTML = "";
+            ele = document.getElementById("lin3t");
+            ele.innerHTML = "";
+
+            ele = document.getElementById("lin4f");
+            ele.innerHTML = "";
+            ele = document.getElementById("lin4s");
+            ele.innerHTML = "";
+        document.getElementById("amount").focus();
     } else {    
     var interest = document.getElementById("interest").value;
     var years = document.getElementById("years").value;
