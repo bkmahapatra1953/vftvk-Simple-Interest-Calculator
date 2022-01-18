@@ -24,6 +24,10 @@ function dispinterest(vol) {
   //this function displays the result
   function showresult() {
     var amount = document.getElementById("amount").value;
+    if (amount <= 0) {
+        alert("Enter a positive number");
+        amount.focus();
+    } else {    
     var interest = document.getElementById("interest").value;
     var years = document.getElementById("years").value;
     var iamt = amount * interest * years / 100;
@@ -57,4 +61,5 @@ function dispinterest(vol) {
     ele.innerHTML = matyr;
     //var ele = document.getElementById("lin4t");
     //ele.innerHTML = ".";
+    }
   }        
