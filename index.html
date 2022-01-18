@@ -1,16 +1,55 @@
+<!DOCTYPE html>
 <html>
     <head>
+    <title>Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <header>
+            <h1 id="first">Simple Interest Calculator</h1>
+          </header>
+          <div>
+            <form id="form1" onsubmit="return checkdata()">
+              <section id ="c1">
+                <br>
+                <label for="amount">Amount</label>
+                <input type="numeric" id="amount" name="amount">
+                <br>
+                <br>
+                <label for="interest">Interest Rate  </label>
+                <input type="range" id="interest" name="interest" value=10.25 min="1" max="20" step="0.25" oninput= "dispinterest(value)">
+                <output for="interest" id="irate">10.25%</output>
+                <br>
+                <br>
+                <label for="years">No. of Years   </label>
+                <select id="years" name="years">
+                  <option value=1 selected>1</option>
+                  <option value=2>2</option>
+                  <option value=3>3</option>
+                  <option value=4>4</option>
+                  <option value=5>5</option>
+                  <option value=6>6</option>
+                  <option value=7>7</option>
+                  <option value=8>8</option>
+                  <option value=9>9</option>
+                  <option value=10>10</option>
+                </select>
+                  <br>
+                  <br>
+                </section>
+            </form>
+              <section id="c2">
+                <input type="submit" value="Compute Interest" onclick="showresult()">
+              </section>  
+              <br>
+              <p id="lin1"><span id="lin1f"></span><mark id="lin1s"></mark><span id="lin1t"></span></p>
+              <p id="lin2"><span id="lin2f"></span><mark id="lin2s"></mark><span id="lin2t"></span></p>
+              <p id="lin3"><span id="lin3f"></span><mark id="lin3s"></mark><span id="lin3t"></span></p>
+              <p id="lin4"><span id="lin4f"></span><mark id="lin4s"></mark><span id="lin4t"></span></p>
+              <section id ="c3">
+                <p id="footer">&#169; This Calculator belongs to Brajendra Kumar Mahapatra</p>
+              </section>
+          </div>
     </body>
 </html>
