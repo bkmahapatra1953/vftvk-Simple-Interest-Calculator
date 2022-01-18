@@ -1,9 +1,10 @@
+//this function displays value of range selector chosen
 function dispinterest(vol) {
     document.querySelector("#irate").value= vol+"%";
   }
 
+  //this function checks amount entered to be > 0.
   function checkdata() {
-    //prompt('press any key to continue');
     var amount = document.getElementById("amount").value;
     var interest = document.getElementById("interest").value;
     var years = document.getElementById("years").value;
@@ -20,7 +21,7 @@ function dispinterest(vol) {
     return true;    
 
   }
-
+  //this function displays the result
   function showresult() {
     var amount = document.getElementById("amount").value;
     var interest = document.getElementById("interest").value;

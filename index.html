@@ -13,15 +13,18 @@
             <form id="form1" onsubmit="return checkdata()">
               <section id ="c1">
                 <br>
+                <!--Label & input elements for Amount-->
                 <label for="amount">Amount</label>
                 <input type="numeric" id="amount" name="amount">
                 <br>
                 <br>
+                <!--Label & input elements for intrest from range selector-->
                 <label for="interest">Interest Rate  </label>
                 <input type="range" id="interest" name="interest" value=10.25 min="1" max="20" step="0.25" oninput= "dispinterest(value)">
                 <output for="interest" id="irate">10.25%</output>
                 <br>
                 <br>
+                <!--Label & input choice from dropdown menu for no. of years-->
                 <label for="years">No. of Years   </label>
                 <select id="years" name="years">
                   <option value=1 selected>1</option>
@@ -40,6 +43,7 @@
                 </section>
             </form>
               <section id="c2">
+                <!--click this button to display the results-->  
                 <input type="submit" value="Compute Interest" onclick="showresult()">
               </section>  
               <br>
